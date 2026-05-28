@@ -17,12 +17,9 @@ plt.show()
 import pandas as pd
 import matplotlib.pyplot as plt
 
-from datetime import datetime
-
 data = pd.read_excel('data2.xlsx')
 
 data['Date'] = pd.to_datetime(data['Date']).dt.date
-
 
 counts = pd.crosstab(data['Date'], data['Product'])
 
